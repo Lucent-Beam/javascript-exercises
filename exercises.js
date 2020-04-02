@@ -85,3 +85,50 @@ console.log(multiplication(999));
 // 1*2*6 = 12 (3);
 // 1*2 = 2 (4);
 
+
+/*NextOne: Dado lo siguiente: "abcde", obtener como resultado:
+    A-Bb-Ccc-Dddd-Eeeee
+*/
+
+converter = function(chain){
+
+    return chain.split('').map((value, index) => {
+        return value.toUpperCase() + value.toLowerCase().repeat(index);
+    }).join('-');
+}
+
+console.log(converter('abcde'));
+
+
+//Morse decoder
+
+/*
+
+decodeMorse = function(morseCode){
+  function decodeMorseLetter(letter) {
+    return MORSE_CODE[letter];
+  }
+  function decodeMorseWord(word) {
+    return word.split(' ').map(decodeMorseLetter).join('');
+  }
+  return morseCode.trim().split('   ').map(decodeMorseWord).join(' ');
+}
+
+*/
+
+
+/* Sum the two less numbers of an array
+ [2,3,10,1,20];
+ Sum = 3, (1+2) */
+
+ sumTwoLessNumbers = function(arr){
+
+    var [a,b] = arr.sort((a,b) => a-b);
+    
+    return a+b;
+
+ }
+
+ console.log(sumTwoLessNumbers([10,20,1,15]));
+
+ 
